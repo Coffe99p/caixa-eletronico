@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caixa eletronico</title>
+</head>
+<body>
+    Digite valor de saque
+    <input type="text" id="valor">
+    <button onclick="sacar();"> OK </button>
+    <div class="resultado" id="resultado"></div>
+   
+
+</body>
+<script>
+    
+    function sacar()
+    {
+
+        v = parseInt(valor.value);
+        valor.value = " ";
+
+        resultado.innerHTML = "";
+        while(v >= 200)
+        {
+            resultado.innerHTML += "<br> 200"
+            v = v - 200;
+        }
+
+        while(v >= 100)
+        {
+            resultado.innerHTML += "<br> 100"
+            v = v - 100;
+        }
+
+        while(v >= 50)
+        {
+            resultado.innerHTML += "<br> 50"
+            v = v - 50;
+        }
+
+        while(v >= 20)
+        {
+            resultado.innerHTML += "<br> 20"
+            v = v - 20;
+        }
+
+        while(v >= 10)
+        {
+            resultado.innerHTML += "<br> 10"
+            v = v - 10;
+        }
+
+        while(v >= 5 && (v+1)%5 == 0)
+        {
+            resultado.innerHTML += "<br> 5"
+            v = v - 5;
+        }
+
+        while(v >= 2)
+        {
+            resultado.innerHTML += "<br> 2"
+            v = v - 2;
+        }
+
+        while(v >= 1)
+        {
+            resultado.innerHTML += "<br> 1"
+            v = v - 1;
+        }
+    }
+
+
+
+</script>
+</html>
